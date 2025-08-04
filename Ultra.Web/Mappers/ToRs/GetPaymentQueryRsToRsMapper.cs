@@ -16,32 +16,35 @@ public class GetPaymentQueryRsToRsMapper
                 input.Result.CodeErrorExt,
                 input.Result.Message
             ),
-            new PaymentDataRs(
-                input.Data.Id,
-                input.Data.DateAdded,
-                input.Data.DateUpdated,
-                input.Data.TypeOperation,
-                input.Data.Status,
-                input.Data.IdTransactionMerchant,
-                input.Data.AmountInitial,
-                input.Data.AmountRandomized,
-                input.Data.Amount,
-                input.Data.AmountComission,
-                input.Data.Currency,
-                input.Data.AmountInCurrencyBalance,
-                input.Data.AmountComissionInCurrencyBalance,
-                input.Data.ExchangeRate,
-                new PaymentDetailsDataRs(
-                    input.Data.PaymentDetailsData.NameMediator,
-                    input.Data.PaymentDetailsData.PaymentMethod,
-                    input.Data.PaymentDetailsData.BankName,
-                    input.Data.PaymentDetailsData.Number,
-                    input.Data.PaymentDetailsData.NumberAdditional,
-                    input.Data.PaymentDetailsData.QRCode
+            input.Data is not null
+                ? new PaymentDataRs(
+                    input.Data.Id,
+                    input.Data.DateAdded,
+                    input.Data.DateUpdated,
+                    input.Data.TypeOperation,
+                    input.Data.Status,
+                    input.Data.IdTransactionMerchant,
+                    input.Data.AmountInitial,
+                    input.Data.AmountRandomized,
+                    input.Data.Amount,
+                    input.Data.AmountComission,
+                    input.Data.Currency,
+                    input.Data.AmountInCurrencyBalance,
+                    input.Data.AmountComissionInCurrencyBalance,
+                    input.Data.ExchangeRate,
+                    new PaymentDetailsDataRs(
+                        input.Data.PaymentDetailsData.NameMediator,
+                        input.Data.PaymentDetailsData.PaymentMethod,
+                        input.Data.PaymentDetailsData.BankName,
+                        input.Data.PaymentDetailsData.Number,
+                        input.Data.PaymentDetailsData.NumberAdditional,
+                        input.Data.PaymentDetailsData.QRCode
+                    )
                 )
-            ),
+                : null,
             input.TotalNumberRecords
         );
+
 }
 
 

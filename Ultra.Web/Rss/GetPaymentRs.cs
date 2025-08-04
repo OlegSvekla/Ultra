@@ -2,7 +2,7 @@
 
 public record GetPaymentRs(
     ResultRs Result,
-    PaymentDataRs Data,
+    PaymentDataRs? Data,
     int TotalNumberRecords
 );
 
