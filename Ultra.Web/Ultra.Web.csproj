@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Ultra.Bl\Ultra.Bl.csproj" />
     <ProjectReference Include="..\Ultra.Contracts\Ultra.Contracts.csproj" />
   </ItemGroup>
 

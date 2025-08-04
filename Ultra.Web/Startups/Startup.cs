@@ -2,6 +2,7 @@
 using Ultra.Core.Startups;
 using Ultra.Web.Mappers;
 using Ultra.Core.Serializers;
+using Ultra.Bl;
 
 namespace Ultra.Web.Startups;
 
@@ -15,6 +16,7 @@ internal sealed class Startup : ServiceStartup
         WebApplicationBuilder builder)
     {
         services.AddWebMappers();
+        services.AddBatchBlHandlers();
         services.AddBatchSerializers();
 
         builder.Services.AddHttpClient();

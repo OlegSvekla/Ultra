@@ -11,7 +11,7 @@ public class AuthBodyBuilder
     private const string PaymentMethod = "PaymentMethod";
     private const string IdTransactionMerchant = "IdTransactionMerchant";
     private const string Amount = "Amount";
-    private const string IntegrationMerchantWebHook = "IntegrationMerchantWebHook";
+    private const string IntegrationMerhcnatData = "IntegrationMerhcnatData";
 
     private readonly IDictionary<string, object> data = new Dictionary<string, object>();
 
@@ -66,7 +66,7 @@ public class AuthBodyBuilder
 
     public AuthBodyBuilder WithIntegrationMerchantData(IntegrationMerchantQuery integrationMerchantData)
     {
-        data[IntegrationMerchantWebHook] = integrationMerchantData;
+        data[IntegrationMerhcnatData] = integrationMerchantData;
         return this;
     }
 
