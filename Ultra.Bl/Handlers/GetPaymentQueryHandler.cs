@@ -24,7 +24,15 @@ internal class GetPaymentQueryHandler(
 
             var body = AuthBodyBuilder.Create()
                 .WithCode("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJCdXNpbmVzc0ludGVncmF0aW9uIiwib\r\nmJmIjoxNzQzNzIwMTk1LCJleHAiOjE3NzUyNTYxOTUsImlzcyI6Ik5QIiwiYXVkIjoiTlBTZXJ2aWNlcy J9.U-b0GjRCWcieRJCQN9BKF7C-zdWropPct084cO2x5mk")
+                .WithClientID(query.ClientID)
+                .WithClientIP(query.ClientIP)
+                .WithClientDateCreated(query.ClientDateCreated)
+                .WithPaymentMethod(query.PaymentMethod)
+                .WithIdTransactionMerchant(query.IdTransactionMerchant)
+                .WithAmount(query.Amount)
+                .WithIntegrationMerchantData(query.IntegrationMerhcnatData)
                 .Build();
+
 
             var rq = new HttpWithBodyRq<IDictionary<string, object>>(
                 Uri: uri,

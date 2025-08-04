@@ -1,5 +1,5 @@
-﻿using Ultra.Core.Mq.Buses;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Ultra.Core.Mq.Buses;
 
 namespace Ultra.Infrastructure.Mq;
 

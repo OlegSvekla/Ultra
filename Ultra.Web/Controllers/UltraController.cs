@@ -27,7 +27,7 @@ public class UltraController(
 {
     [HttpPost("payments/info")]
     [ProducesResponseType(Status200OK, Type = typeof(GetPaymentRs))]
-    public async Task<IActionResult> GetEventsAsync(
+    public async Task<IActionResult> GetPaymentInfoAsync(
         [FromBody] GetPaymentRq rq,
         CancellationToken ct)
     {

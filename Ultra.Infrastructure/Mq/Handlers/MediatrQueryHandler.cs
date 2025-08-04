@@ -1,5 +1,7 @@
 ﻿using MediatR;
+using Ultra.Core.Mq.Handlers;
 using Ultra.Core.Mq.Messages;
+using Ultra.Infrastructure.Mq.Messages;
 
 namespace Ultra.Infrastructure.Mq.Handlers;
 

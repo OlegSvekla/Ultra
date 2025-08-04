@@ -1,5 +1,5 @@
-﻿using Ultra.Core.Mq.Messages;
-using MediatR;
+﻿using MediatR;
+using Ultra.Core.Mq.Messages;
 
 namespace Ultra.Infrastructure.Mq.Messages;
 
