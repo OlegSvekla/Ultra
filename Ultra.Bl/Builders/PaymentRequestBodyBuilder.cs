@@ -2,7 +2,7 @@
 
 namespace Ultra.Bl.Builders;
 
-public class AuthBodyBuilder
+public class PaymentRequestBodyBuilder
 {
     private const string Code = "Code";
     private const string ClientID = "ClientID";
@@ -15,56 +15,56 @@ public class AuthBodyBuilder
 
     private readonly IDictionary<string, object> data = new Dictionary<string, object>();
 
-    private AuthBodyBuilder()
+    private PaymentRequestBodyBuilder()
     {
     }
 
-    public static AuthBodyBuilder Create()
-        => new AuthBodyBuilder();
+    public static PaymentRequestBodyBuilder Create()
+        => new PaymentRequestBodyBuilder();
 
-    public AuthBodyBuilder WithCode(string code)
+    public PaymentRequestBodyBuilder WithCode(string code)
     {
         data[Code] = code;
         return this;
     }
 
-    public AuthBodyBuilder WithClientID(string clientID)
+    public PaymentRequestBodyBuilder WithClientID(string clientID)
     {
         data[ClientID] = clientID;
         return this;
     }
 
-    public AuthBodyBuilder WithClientIP(string clientIP)
+    public PaymentRequestBodyBuilder WithClientIP(string clientIP)
     {
         data[ClientIP] = clientIP;
         return this;
     }
 
-    public AuthBodyBuilder WithClientDateCreated(DateTime clientDateCreated)
+    public PaymentRequestBodyBuilder WithClientDateCreated(DateTime clientDateCreated)
     {
         data[ClientDateCreated] = clientDateCreated;
         return this;
     }
 
-    public AuthBodyBuilder WithPaymentMethod(string paymentMethod)
+    public PaymentRequestBodyBuilder WithPaymentMethod(string paymentMethod)
     {
         data[PaymentMethod] = paymentMethod;
         return this;
     }
 
-    public AuthBodyBuilder WithIdTransactionMerchant(string idTransactionMerchant)
+    public PaymentRequestBodyBuilder WithIdTransactionMerchant(string idTransactionMerchant)
     {
         data[IdTransactionMerchant] = idTransactionMerchant;
         return this;
     }
 
-    public AuthBodyBuilder WithAmount(decimal amount)
+    public PaymentRequestBodyBuilder WithAmount(decimal amount)
     {
         data[Amount] = amount;
         return this;
     }
 
-    public AuthBodyBuilder WithIntegrationMerchantData(IntegrationMerchantQuery integrationMerchantData)
+    public PaymentRequestBodyBuilder WithIntegrationMerchantData(IntegrationMerchantQuery integrationMerchantData)
     {
         data[IntegrationMerhcnatData] = integrationMerchantData;
         return this;

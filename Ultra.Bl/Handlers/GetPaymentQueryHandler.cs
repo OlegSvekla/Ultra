@@ -24,7 +24,7 @@ public class GetPaymentQueryHandler(
             var method = HttpMethod.Post;
             var uri = new Uri($"https://api.brusnikapay.top/host2host/payin");
 
-            var body = AuthBodyBuilder.Create()
+            var body = PaymentRequestBodyBuilder.Create()
                 .WithClientID(query.ClientID)
                 .WithClientIP(query.ClientIP)
                 .WithClientDateCreated(query.ClientDateCreated)
